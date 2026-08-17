@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   description: "Portfolio of Naman Soni, a full stack developer building modern, scalable web experiences.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className="noise">{children}</body></html>;
+export default function RootLayout(
+  { children }: Readonly<{ children: React.ReactNode }>
+) {
+  return (
+    <>
+      <html lang="en">
+        <body className="noise">
+          {children}
+        </body>
+      </html>;
+    </>
+  );
 }

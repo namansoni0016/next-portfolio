@@ -1,27 +1,33 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github, Globe2 } from "lucide-react";
 import { Section } from "./Section";
 
 const projects = [
     {
         no: "01",
-        title: "Travel Intelligence",
+        title: "TripAI",
         type: "AI • Full Stack",
-        desc: "A conversational travel experience that turns natural-language intent into structured destinations and itineraries.",
+        desc: "An AI powered travel itinerary generator made using Nextjs, Typescript, Neon, Prisma and Groq AI along with rate limiter that allows users to create itineraries and provides functionality of interactive maps to get locations.",
         tags: ["Next.js", "TypeScript", "AI", "Tailwind"],
+        githubUrl: "https://github.com/namansoni0016/tripAI",
+        liveUrl: "https://trip-ai-ten.vercel.app/",
     },
     {
         no: "02",
-        title: "Developer OS",
+        title: "Estate Edge",
         type: "Product • Web App",
-        desc: "A command-centre style workspace for projects, notes, experiments and personal productivity.",
-        tags: ["React", "Node.js", "PostgreSQL", "AWS"],
+        desc: "A MERN stack real estate website allowing users to list properties for sale or rent. Integrated Firebase for storing images, implemented secure user authentication with JWT and Google OAuth. Developed features like advanced property search and image upload.",
+        tags: ["React.js", "Node.js", "MongoDB", "Tailwind"],
+        githubUrl: "https://github.com/namansoni0016/estateEdge",
+        liveUrl: "https://estateedge.onrender.com/",
     },
     {
         no: "03",
-        title: "Content Studio",
-        type: "Creator • CMS",
-        desc: "A minimal publishing system for long-form writing, visual stories and travel journals without unnecessary editorial overhead.",
-        tags: ["Next.js", "MDX", "Cloudinary", "Vercel"],
+        title: "Money Mate",
+        type: "Product • Web App",
+        desc: "A MERN stack expense tracker application, incorporating Redux and React Query. Implemented a robust category-based system allowing users to create and manage income and expense categories, and dynamically link transactions to these categories.",
+        tags: ["React.js", "Node.js", "MongoDB", "Redux"],
+        githubUrl: "https://github.com/namansoni0016/expense-tracker",
+        liveUrl: "https://moneymate-mu.vercel.app/",
     },
 ];
 
@@ -43,7 +49,7 @@ export function Projects() {
                                     className="transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#c8ff3d]"
                                 />
                             </div>
-                            <p className="mt-16 text-xs font-bold uppercase tracking-[.2em] text-[#c8ff3d]">
+                            <p className="mt-12 text-xs font-bold uppercase tracking-[.2em] text-[#c8ff3d]">
                                 {project.type}
                             </p>
                             <h3 className="mt-3 text-3xl font-black tracking-tight">
@@ -63,6 +69,29 @@ export function Projects() {
                                     {tag}
                                 </span>
                             ))}
+                        </div>
+
+                        {/* Links */}
+                        <div className="mt-6 flex gap-3">
+                            <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-sm font-semibold text-zinc-300 transition hover:border-white/20 hover:bg-white/10 hover:text-white"
+                            >
+                                <Github size={16} />
+                                GitHub
+                            </a>
+
+                            <a
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#c8ff3d] px-4 py-3 text-sm font-bold text-black transition hover:scale-[1.02] hover:bg-[#d5ff69]"
+                            >
+                                <Globe2 size={16} />
+                                Live Demo
+                            </a>
                         </div>
                     </article>
                 ))}

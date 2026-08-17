@@ -4,14 +4,14 @@ const experience = [
     {
         period: "Dec 2025 — Present",
         role: "Full Stack Developer",
-        company: "Product & Web Engineering",
-        text: "Building production web applications end-to-end — from responsive interfaces and APIs to databases, deployments and cloud infrastructure.",
+        company: "Zlines",
+        text: "Built reusable frontend components, shared UI utilities and optimized data-fetching strategies, reducing redundant API requests and improving application performance. Designed a module-level role-based access control (RBAC) system. Optimized the generation pipeline with query batching and parallel I/O.",
     },
     {
         period: "Jun 2023 — Dec 2023",
         role: "Product Manager",
         company: "ICICI Bank",
-        text: "Worked across product thinking, stakeholder collaboration and execution, translating business problems into usable digital experiences.",
+        text: "Prepared BRS and test cases for trade finance projects, collaborating with cross-functional teams to ensure project alignment and efficient execution. Led successful development of TradeOnline, migrations of InstaEPC to NTS, and Helpdesk to iCRM, improving system performance and user experience through rigorous UAT and issue resolution.",
     },
 ];
 
@@ -24,11 +24,8 @@ export function Experience() {
         >
             <div className="space-y-0 border-t border-white/10">
                 {experience.map((item, index) => (
-                    <article
-                        key={`${item.company}-${item.role}`}
-                        className="grid gap-5 border-b border-white/10 py-9 md:grid-cols-[.35fr_1fr] md:gap-16"
-                    >
-                        <div className="flex items-start justify-between text-sm text-zinc-500 md:block">
+                    <article key={`${item.company}-${item.role}`} className="grid gap-5 border-b border-white/10 py-9 md:grid-cols-[.35fr_1fr] md:gap-16">
+                        <div className="flex items-start justify-between text-sm text-zinc-400 md:block">
                             <span>{item.period}</span>
                             <span className="md:hidden">
                                 0{index + 1}
@@ -45,7 +42,7 @@ export function Experience() {
                                         {item.role}
                                     </h3>
                                 </div>
-                                <span className="hidden text-zinc-700 md:block">
+                                <span className="hidden text-zinc-400 md:block">
                                     0{index + 1}
                                 </span>
                             </div>

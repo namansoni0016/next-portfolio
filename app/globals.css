@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #07070a;
+  --surface: #0d0d12;
+  --muted: #a1a1aa;
+  --line: rgba(255,255,255,.10);
+  --accent: #c8ff3d;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #f4f4f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+::selection { background: var(--accent); color: #09090b; }
+
+.noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .035;
+  z-index: 50;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.glass { background: rgba(13,13,18,.72); border: 1px solid var(--line); backdrop-filter: blur(18px); }
+.glow { box-shadow: 0 0 80px rgba(200,255,61,.10); }
+
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+.float { animation: float 6s ease-in-out infinite; }
+
+@keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+.marquee { animation: marquee 28s linear infinite; width: max-content; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .float, .marquee { animation: none; }
+}

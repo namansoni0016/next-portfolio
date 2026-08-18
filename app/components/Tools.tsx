@@ -1,7 +1,7 @@
 import {
     Code2,
-    Globe2,
     Server,
+    Database,
     Terminal,
 } from "lucide-react";
 import { Section } from "./Section";
@@ -13,9 +13,9 @@ const tools = [
         items: [
             "React.js",
             "Next.js",
-            "TypeScript",
             "Tailwind CSS",
-            "HTML / CSS",
+            "Material UI",
+            "Redux",
         ],
     },
     {
@@ -24,31 +24,31 @@ const tools = [
         items: [
             "Node.js",
             "REST APIs",
-            "PostgreSQL",
-            "MongoDB",
-            "Authentication",
+            "Laravel",
+            "GraphQL",
+            "JWT"
         ],
     },
     {
-        category: "Cloud & DevOps",
-        icon: Globe2,
+        category: "Databases",
+        icon: Database,
         items: [
-            "AWS",
-            "Vercel",
-            "Git / GitHub",
-            "CI / CD",
-            "Linux",
+            "PostgreSQL",
+            "MySQL",
+            "MongoDB",
+            "Prisma ORM",
+            "Neon",
         ],
     },
     {
-        category: "Workflow",
+        category: "Tools",
         icon: Terminal,
         items: [
-            "Figma",
-            "Jest",
-            "Postman",
+            "GitHub",
             "VS Code",
-            "AI tooling",
+            "Postman",
+            "Docker",
+            "Vercel",
         ],
     },
 ];

@@ -9,8 +9,6 @@ export function Hero() {
                 <div className="mb-8 flex items-center justify-center gap-3 text-sm text-zinc-400">
                     <span className="h-2 w-2 rounded-full bg-[#c8ff3d] shadow-[0_0_18px_#c8ff3d]" />
                     Available for interesting work
-                    <span className="text-zinc-600">/</span>
-                    Ahmedabad, India
                 </div>
 
                 <div className="text-center">

@@ -24,12 +24,12 @@ export function Contact() {
                 </p>
 
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                    <a href="mailto:hello@example.com" className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 font-bold text-white transition hover:scale-105">
+                    <a href="mailto:namantsoni@gmail.com" className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 font-bold text-white transition hover:scale-105">
                         <Mail size={17} />
                         Email me
                     </a>
                     <a
-                        href="https://www.linkedin.com"
+                        href="https://www.linkedin.com/in/naman-soni-016/"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center justify-center gap-2 rounded-full border border-black/20 px-6 py-3 font-bold transition hover:bg-black/10"
@@ -37,16 +37,21 @@ export function Contact() {
                         <Linkedin size={17} />
                         LinkedIn
                     </a>
+                    <a
+                        href="https://github.com/namansoni0016"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-full border border-black/20 px-6 py-3 font-bold transition hover:bg-black/10"
+                    >
+                        <Github size={17} />
+                        GitHub
+                    </a>
                 </div>
 
                 <div className="mt-14 flex flex-wrap gap-5 text-sm font-medium">
                     <span className="flex items-center gap-2">
                         <MapPin size={15} />
                         Ahmedabad, India
-                    </span>
-                    <span className="flex items-center gap-2">
-                        <Github size={15} />
-                        github.com/namansoni
                     </span>
                 </div>
             </div>
